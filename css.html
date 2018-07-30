@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>css</title>
+  <meta charset="utf-8">
+  <style >
+    .container1{width:400px;height: 300px;overflow: hidden;}
+    .photo{width: 1200px;animation:first 5s ease-out infinite ;animation-direction:alternate}
+    .photo > img{float:left;}
+    @keyframes first {
+        0%,25%{ margin-left:0; }
+        35%,60%{ margin-left:-400px; }
+        70%,100%{ margin-left:-800px; }
+    }
+  </style>
+</head>
+<body>
+ <h2> css:</h2>
+       <h4>样式--盒子模型--定位--选择器--高级</h4>
+    <h3>一.样式</h3>
+    <h4>1.背景</h4> 
+          <ol type="a">
+             <li>background:</li>
+             <li>background-color:</li>
+             <li>background-image:url();</li>
+             <li>background-repeat:repeat|no-repeat|repeat-x|repeat-y|inherit;</li>
+             <li>background-position:top center|center|50%|...|</li>
+             <li>background-size: length|percentage|cover|contain;</li>
+             <li>background-attachment:scroll,fixed,inherit;</li>
+             <li>background-origin: padding-box|border-box|content-box;-----position</li>
+             <li>background-clip: border-box|padding-box|content-box;-------color </li>
+           </ol> 
+        
+    <h4> 2.文本</h4> 
+          <ol type="a">
+            <li>文字居中   text-align:left|right|center|justify|inherit;</li>
+            <li>首行缩进   text-indent</li>
+            <li>字单词间距 word-spacing: normal|length|inherit；</li>
+            <li>字母间距   letter-spacing：normal|length|inherit；</li>
+            <li>文本大小写 text-transform：none|uppercase|lowercase|capitalize;</li>
+            <li>文本装饰   text-decoration：none|underline|overline|line-through|blink；</li>
+            <li>空白符      white-space:normal；丢点多余的空白符</li>
+            <li>文字方向   direction：ltr|rtl|inherit；</li>
+          </ol>
+       
+    <h4>3.字体</h4>
+    <h4> 4.连接 </h4>
+    <h4>5.列表</h4>
+    <h4>6.表格</h4>
+            <ol type="a">
+              <li> table,tr,th,td</li>
+              <li>表格边框border，</li>
+              <li>折叠边框border-collapse: collapse,separate,inherit,</li>
+              <li> width,height,</li>
+              <li>文本居中：text-align：center；vertical-align:center；</li>
+              <li>表格内边距：padding；</li>
+              <li>表格颜色：背景background-color，字体color；</li>
+              <li>table-layout: automatic/fixed/inherit</li>
+              <li> border-spacing:length length,inherit;</li>
+              <li>empty-cells:hide,show,inherit;</li>
+              <li>caption-side:top,bottom,inherit;</li>
+            </ol>
+      
+          
+    <h4>7.轮廓</h4> 
+            <ol type="a">
+              <li>outline (color,style,width)</li>
+            </ol>
+     <h2> css3</h2>     
+     <h4>css3动画</h4> 
+     <h5>@keyframes规则</h5>
+         <ol>
+           <li>@keyframes animation{from to}</li>
+           <li>@keyframes animation{0% 50% 100%}</li>
+         </ol>
+     <h5>animation属性: 必须绑定到DIV</h5>
+     <ol type="A">
+       <li>animation: 所有动画属性的简写属性，除了 animation-play-state 属性</li>
+       <li>animation-name:规定 @keyframes 动画的名称。</li>
+       <li>animation-duration:规定动画完成一个周期所花费的秒或毫秒。默认是 0</li>
+       <li>animation-timing-function: 规定动画的速度曲线。默认是 "ease"</li>
+       <li>animation-delay:规定动画何时开始。默认是 0</li>
+       <li>animatiion-iteration-count:规定动画被播放的次数。默认是 1</li>
+       <li>animation-direction: 规定动画是否在下一周期逆向地播放。默认是 "normal"</li>
+       <li>animation-pay-state:规定动画是否正在运行或暂停。默认是 "running"。</li>
+     </ol>
+      <h5>CSS实现图片轮播</h5>
+      <div class="container1" >
+          <div class="photo" >
+                <img src="images/image-1.jpg" alt="1">
+                <img src="images/image-2.jpg" alt="2">
+                <img src="images/image-3.jpg" alt="3">
+          </div>
+      </div>
+</body>
+</html>
