@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta charset="utf-8">
+	<style>
+		#box{background-color:#ccc;width: 600px;height: 200px;padding:5px;}
+		tr{border:1px solid #ccc;}
+		table{border-collapse:collapse}
+	</style>
+
+	<style>
+		/*Ñ¡Ïî¿¨*/
+/*		.tabs div{width:300px;height: 200px;border:1px solid #ccc;border-radius: 0 0 12px 12px;float:left;}
+		.tabs p{padding:10px;font:14px "microsoft yahei";}
+		.tabs ul{list-style:none;display: block;height:30px;line-height:30px;border-bottom:2px saddlebrown solid;}
+		.tabs li{background:#fff;cursor:pointer;float:left;list-style:none;height:28px;line-height:28px;margin:0px 3px;border:1px solid #aaaaaa;border-bottom:none;display:inline-block;width:60px;text-align: center;}
+		.hide{display:none;}*/
+		        *{padding:0px;margin: 0px;font:12px normal "microsoft yahei";}
+        #tabs {width:290px;padding:5px;height:150px;margin:20px;}
+        #tabs ul{list-style:none;display: block;height:30px;line-height:30px;border-bottom:2px saddlebrown solid;}
+        #tabs ul li{background:#fff;cursor:pointer;float:left;list-style:none;height:28px;line-height:28px;margin:0px 0px;border:1px solid #aaaaaa;border-bottom:none;display:inline-block;width:70px;text-align: center;}
+        #tabs ul li.on{border-top:2px solid saddlebrown;border-bottom: 2px solid #fff;}
+        #tabs div{height:120px;line-height: 25px;border:1px solid #336699;border-top:none;padding:5px;}
+        .hide{display: none;}
+	</style>
+</head>
+<body>
+		<input type="button" value="改变颜色" class="input1" onclick="changeColor()">
+		<input type="button" value="改变宽高" class="input2" onclick="changeWH()">
+		<input type="button" value="隐藏内容" class="input3" onclick="hide()">
+		<input type="button" value="显示内容" class="input4" onclick="show()">
+		<input type="button" value="取消设置" class="input5" onclick="reset()">
+	<div id="box">
+		<h5>JavaScript75万购昌平邻铁三居 总价20万买一居
+			    200万内购五环三居 140万安家东三环</h5>
+        <p>75万购昌平邻铁三居 总价20万买一居
+			    200万内购五环三居 140万安家东三环</p>
+        <p>75万购昌平邻铁三居 总价20万买一居
+			    200万内购五环三居 140万安家东三环</p>
+        <p>75万购昌平邻铁三居 总价20万买一居
+			    200万内购五环三居 140万安家东三环</p>
+	</div>
+
+
+	    <div id="tabs">
+		<ul>
+			<li class="on">房产：</li>
+			<li>家居:</li>
+			<li>二手房：</li>
+		</ul>
+		<div class="show">
+			<p>
+			    275万购昌平邻铁三居 总价20万买一居
+			    200万内购五环三居 140万安家东三环
+			    北京首现零首付楼盘 53万购东5环50平
+			    京楼盘直降5000 中信府 公园楼王现房
+			</p>
+		</div>
+		<div class="hide">
+			<p>40平出租屋大改造 美少女的混搭小窝
+			     经典清新简欧爱家 90平老房焕发新生
+			     新中式的酷色温情 66平撞色活泼家居
+			     瓷砖就像选好老婆 卫生间烟道的设计
+		    </p>
+		</div>
+		<div class="hide">
+			<p> 通州豪华3居260万 二环稀缺2居250w甩
+			     西3环通透2居290万 130万2居限量抢购
+			     黄城根小学学区仅260万 121平70万抛!
+			     独家别墅280万 苏州桥2居优惠价248万
+			</p>
+		</div>
+    </div>
+    <script type="text/javascript">
+         window.onload = function(){
+             var oTab = document.getElementById("tabs");
+             var oUl = oTab.getElementsByTagName("ul")[0];
+             var oLis = oUl.getElementsByTagName("li");
+             var oDivs= oTab.getElementsByTagName("div");
+
+             for(var i= 0,len = oLis.length;i<len;i++){
+                 oLis[i].index = i;
+                 oLis[i].onclick = function() {
+                     for(var n= 0;n<len;n++){
+                         oLis[n].className = "";
+                         oDivs[n].className = "hide";
+                     }
+                     this.className = "on";
+                     oDivs[this.index].className = "";
+                 }
+             }
+         }
+    </script>
+    <script>
+    		// Ñ¡Ïî¿¨
+    		window.onload=function(){
+    			var tabs=document.getElementById('tabs');
+    			var oUl=tabs.getElementsByTagName('ul');
+    			var oLi=oUl.getElementsByTagName('li');
+    			var oDiv=tabs.getElementsByTagName('div');
+    			for(var i=0;len=oLi.lenght;i<len;i++){
+    				oLi[i].index=i;
+    				oLi[i].onclick=function(){
+    					for(var n=0;n<len;n++){
+    						oLi[n].className="";
+    						oDiv[n].className="hide";
+    					}
+    					this.className="on";
+    					oDiv[this.index].className="";
+    			}
+
+    			}
+    			
+    		}
+    </script>
+	<script>
+		var box=document.getElementById('box');
+		function changeColor(){
+			box.style.backgroundColor="red";
+		}
+		function changeWH(){
+			box.style.width="200px";
+			box.style.height="600px";
+		}
+		function hide(){
+			box.style.display="none";
+		}
+		function show(){
+			box.style.display="block ";
+		}
+		function reset(){
+			box.style.backgroundColor="#ccc";
+			box.style.width="600px";
+			box.style.height="200px";
+		}
+	
+
+		// 	for(var i=1;i<=9;i++){
+		// 		for(var j=1;j<=9;j++){
+		// 			var k;
+		// 			if(j<=i){
+		// 				k=i*j;
+		// 				document.write("<tr>");
+		// 			document.write(i+"*"+j+"="+k+"&nbsp&nbsp");
+		// 			}
+					
+		// 		}
+		// 		document.write("<br>");
+		// 	}
+		// 	document.write("</tr>");
+		// }
+		function mulChart(){
+			for(var i=1;i<10;i++){
+				var k;
+				for(j=1;j<=i;j++){
+					k=i*j;
+				}
+				console.log(`(${i}*${j}=${i*j}\t)`) ;
+			}
+		}
+		 function mul1(){
+               for(var r=1;r<=9;r++){  //¿ØÖÆÐÐÊý
+                    var chart1="";
+                    
+                    
+                    for(var c=1;c<=r;c++){   //¿ØÖÆÁÐÊý
+                        chart1+=(`${c}*${r}=${c*r}\t`);
+                     	
+                    }
+                    console.log(chart1);
+
+               }
+         }
+         function mul2(){
+               for(var r=1;r<=9;r++){  //¿ØÖÆÐÐÊý
+                    var chart1="";
+                    
+                    
+                    for(var c=1;c<=r;c++){   //¿ØÖÆÁÐÊý
+                        
+                     	chart1+=(`${r}*${c}=${c*r}\t`);
+                    }
+                    console.log(chart1);
+
+               }
+         }
+	</script>
+</body>
+</html>
