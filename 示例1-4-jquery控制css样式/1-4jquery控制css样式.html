@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1-4jquery控制CSS样式</title>
+	<meta charset="utf-8">
+	<script src="../jscript/jquery.min.js"></script>
+	<style>
+		.default{width: 260px;padding:5px;}
+		.click1{width: 260px;background-color: #eee;border:1px solid #ccc;}
+	</style>
+
+</head>
+<body>
+	<div class="default">点击前的样式</div>
+<script>
+
+	
+	$(document).ready(function(){
+	
+		$(".default").click(function(){
+			$(this).toggleClass("click1").html("点击后的样式");
+		});
+	});
+</script>
+
+</body>
+</html>

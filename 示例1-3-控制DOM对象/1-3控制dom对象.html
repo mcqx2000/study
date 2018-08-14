@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1-3控制dom对象</title>
+	<meta charset="utf-8">
+	<script src="../jscript/jquery.min.js"></script>
+	<style>
+			.frame{width:260px;border:1px solid #666;}
+			.title{background-color: #eee;padding:5px;}
+			.content{padding:8px;}
+			.tip{width:244px;border:1px solid #ccc;padding:8px;margin-top:5px;display:none;}
+			.txtcss{border:1px solid #ccc;}
+			.btn{padding-top: 5px;}
+			.btn .btncss{ border:1px solid #535353;width:60px;}
+	</style>
+<!-- 	<script>
+			function btnclick(){
+		var tname=document.getElementById('text1').value;
+		var tsex=(radio1.checked)?"男":"女";
+		var tcheckbox=(checkbox.checked)?"已婚":"未婚";
+		document.getElementById('tip').style.display="block";
+		document.getElementById('tip').innerHTML=tname+"<br />"+tsex+"<br />"+tcheckbox;
+	}
+	</script> -->
+</head>
+<body>
+	<div class="frame">
+		<div class="title">请输入以下信息：</div>
+		<div class="content">
+			姓名：<input type="text" id="text1" class="txtcss"><br>
+			性别：<input id="radio1" type="radio" name="sex" value="男"> 男
+				  <input id="radio2" type="radio" name="sex" value="女"> 女<br>
+		    婚否：<input type="checkbox" id="checkbox">
+		    <div class="btn"><input type="button" value="提交" class="btncss"  >
+		    </div>
+		    <!-- onclick="btnclick()" -->
+		</div>
+	</div>
+	<div class="tip" id="tip"></div>
+<script>
+// window.onload=function(){
+
+// 	function btnclick(){
+// 		var tname=document.getElementById('text1').value;
+// 		var tsex=(radio1.checked)?"男"："女";
+// 		var tcheckbox=(checkbox.checked)?"已婚":"未婚";
+// 		document.getElementById('tip').innerHTML=tname+"<br />"+tsex+"<br />"+tcheckbox;
+// 	}
+// };
+	
+	$(document).ready(function(){
+		// $(".text1").val()
+		$(".btncss").click(function(){
+		var tname=$("#text1").val();
+		var tsex=$("#radio1").is(":checked")?"男":"女";
+		var tcheckbox=$("#checkbox").is(":checked")?"未婚":"已婚";
+		
+		$(".tip").css("display","block").html(tname+"<br>"+tsex+"<br>"+tcheckbox);
+		});
+		
+	});
+</script>
+
+</body>
+</html>

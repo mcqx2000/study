@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery链接式写法</title>
+	<meta charset="utf-8">
+	<script src="../jscript/jquery.min.js"></script>
+	<style>
+		.divframe{width: 300px; border:solid 1px #666;}
+		.content{display: none;padding:5px;}
+		.title{background-color: #eee;padding:5px;}
+		.currColor{background-color: red;};
+	</style>
+</head>
+<body>
+	<div class="divframe">
+		<div class="title">主题</div>
+			<div class="content">
+				<a href="#">百度</a><br>
+				<a href="#">搜狗</a><br>
+				<a href="#">Google</a>
+			</div>
+		
+	</div>
+<script>
+	$(document).ready(function(){
+		$(".title").click(function(){
+			$(this).addClass("currColor")
+			.next(".content").css("display","block");
+		});
+		
+	});
+</script>
+
+</body>
+</html>

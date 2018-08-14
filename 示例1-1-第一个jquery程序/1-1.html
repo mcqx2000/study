@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>第一个jquery程序</title>
+	<meta charset="utf-8">
+	<script src="../jscript/jquery.min.js"></script>
+	<code>window.onload=function(){
+				alert("hellowrld！");
+					};<br>
+			$(document).ready(function(){
+				alert("hellojquery!");
+			});<br>
+			$(function(){alert(1);})
+	</code>
+	<h5>区别</h5>
+	<p>1.响应速度不同：$(document).ready(function(){，框架加载完就响应，window.onload页面完全加载完响应</p>
+	<p>2.执行数量不同：$执行多个   window.onload执行多个，返回一个</p>
+	<p>3.简写 $(function(){});</p>
+</head>
+<body>
+<script>
+window.onload=function(){
+	alert("hellowrld！");
+};
+$(document).ready(function(){
+	alert("hellojquery!");
+});
+$(function(){alert(1);})
+</script>
+</body>
+</html>
