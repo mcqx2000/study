@@ -1,0 +1,11 @@
+*{margin:0;padding:0;}
+.header{position: relative;
+	height: 32px;border-bottom: 1px solid #555;}
+#ul a{font-style: normal;
+	color:#555;
+	font-size: 14px;
+	font-weight: bold;
+	right:30px;
+}
+#ul{position:absolute;
+	float:right;}
